@@ -6,7 +6,7 @@ suppressPackageStartupMessages({
   library(readr)
 })
 
-set.seed(42)
+set.seed(404)
 data_path <- file.path("data", "dataset.csv")
 output_dir <- "outputs"
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
@@ -14,10 +14,14 @@ dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 if (file.exists(data_path)) {
   df <- read_csv(data_path, show_col_types = FALSE)
 } else {
+  n <- 90
+  half <- floor(n / 2)
+  group_a <- rnorm(half, mean = 42, sd = 15)
+  group_b <- rnorm(n - half, mean = 42 + (4), sd = 15)
   df <- tibble(
-    time = 1:60,
-    signal = rnorm(60, mean = 50, sd = 10),
-    group = ifelse((1:60) %% 2 == 0, "A", "B")
+    time = 1:n,
+    signal = c(group_a, group_b),
+    group = c(rep("A", half), rep("B", n - half))
   )
 }
 

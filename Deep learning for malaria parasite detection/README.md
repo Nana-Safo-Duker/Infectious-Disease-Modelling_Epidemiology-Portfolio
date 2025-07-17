@@ -12,6 +12,7 @@ A comprehensive AI/ML epidemiology project focused on **Deep learning for malari
 - [Data and Methodology](#data-and-methodology)
 - [Modeling and Evaluation](#modeling-and-evaluation)
 - [Outputs](#outputs)
+- [Visualizations](#visualizations)
 - [Reproducibility](#reproducibility)
 - [Contributing](#contributing)
 - [License](#license)
@@ -40,8 +41,6 @@ This project is part of the Infectious Disease Modelling and Epidemiology Portfo
 ```text
 .
 ├── README.md
-├── Guidelines_Research_Paper_Review.txt
-├── Scientific_Blog_Post.md
 ├── analysis_pipeline.py
 ├── analysis_pipeline.R
 ├── detailed_review_notebook.ipynb
@@ -49,7 +48,9 @@ This project is part of the Infectious Disease Modelling and Epidemiology Portfo
 ├── .gitignore
 ├── .gitattributes
 ├── LICENSE
-└── outputs/                           # Created after execution
+├── assets/                            # Committed visualization(s) for this README
+│   └── overview.png
+└── outputs/                           # Created after execution (gitignored)
     ├── summary_statistics.csv
     ├── t_test_result.csv
     ├── summary_statistics_r.csv
@@ -122,8 +123,20 @@ After execution, expected artifacts include:
 - `outputs/summary_statistics_r.csv`
 - `outputs/t_test_result_r.csv`
 - `outputs/signal_plot_r.png`
+- `assets/overview.png` (committed copy used in the Visualizations section below)
 
 These files can be used for documentation, quick QA checks, and side-by-side rerun comparisons.
+
+## Visualizations
+
+Running `python analysis_pipeline.py` regenerates the overview figure below using illustrative, independently simulated data shaped to this project's theme (separate from the generic signal/group scaffold used for the summary statistics and t-test above):
+
+![Overview visualization](assets/overview.png)
+
+- **Left panel:** simulated training vs. validation accuracy curves over epochs for a CNN-style parasite classifier.
+- **Right panel:** a confusion matrix for a simulated Parasitized vs. Uninfected test set, illustrating classification performance reporting.
+
+> These panels are illustrative (simulated), meant to demonstrate the kind of visualization this workflow would produce. Replace with real data/model outputs to make them analytically meaningful for production use.
 
 ## Reproducibility
 - Fixed random seeds are used for deterministic synthetic examples.

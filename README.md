@@ -238,7 +238,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you use this model in your research, please cite:
 
 ```bibtex
-@software{malaria_transmission_model_madagascar,
+@software{malaria-transmission-model-madagascar,
   title={Malaria Transmission Model in Madagascar: ITN Effectiveness and Resistance},
   author={Safo, et al. },
   year={2025},

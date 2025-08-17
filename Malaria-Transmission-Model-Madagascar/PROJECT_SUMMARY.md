@@ -341,3 +341,4 @@ MIT License - See [LICENSE](LICENSE) file
 
 **Made with ❤️ for malaria research and public health**
 
+**Last Updated**: August 2025

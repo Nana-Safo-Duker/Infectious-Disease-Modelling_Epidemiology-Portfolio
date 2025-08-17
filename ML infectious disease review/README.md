@@ -154,4 +154,4 @@ This project is released under the MIT License. See `LICENSE` for details.
 ## Disclaimer
 This project is for research, learning, and portfolio demonstration. It is not a clinical decision-support system and should not be used for medical decision-making without domain validation, governance review, and regulatory compliance.
 
-**Last Updated**: July 2025
+**Last Updated**: August 2025

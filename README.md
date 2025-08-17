@@ -267,7 +267,7 @@ If you use this model in your research, please cite:
 
 ---
 
-Status: 🟢 Active Development
+## Status: 🟢 Active Development
 
 ✨ **Updates**
 

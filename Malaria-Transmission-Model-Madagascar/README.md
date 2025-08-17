@@ -437,3 +437,5 @@ We gratefully acknowledge:
 ---
 
 **Made with ❤️ for malaria research and public health**
+
+**Last Updated**: August 2025

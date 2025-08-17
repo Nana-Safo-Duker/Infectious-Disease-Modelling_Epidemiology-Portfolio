@@ -269,4 +269,24 @@ If you use this model in your research, please cite:
 
 **Last Updated**: December 2024  
 **Version**: 1.0.0  
-**Status**: Active Development
+**Status**: Active Development🧩 Changelog
+🚀 Version 1.1.0 — October 2025
+
+Status: 🟢 Active Development
+
+✨ Updates
+
+🧠 Improved Jupyter Notebook (.ipynb) with enhanced malaria transmission simulations and plots.
+
+📊 Optimized R script (.R) for cleaner model fitting, reproducibility, and faster computation.
+
+🧾 Refined documentation and added clearer explanations for model assumptions.
+
+🧹 Repository cleanup — removed unused folders, temp files, and configuration clutter.
+
+📅 Previous Version
+
+Version 1.0.0 — December 2024
+
+🔰 Initial release featuring deterministic malaria model and ITN resistance simulations.
+

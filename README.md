@@ -1,6 +1,6 @@
 # Malaria Transmission Model in Madagascar
 
-A comprehensive epidemiological modeling study examining the effectiveness of Insecticide-Treated Nets (ITNs) in malaria control programs in Madagascar, with particular focus on the impact of insecticide resistance over time.
+A comprehensive epidemiological modeling study examining the effectiveness of Insecticide-Treated Nets (ITNs) in malaria control programs in Madagascar with particular focus on the impact of insecticide resistance over time.
 
 ## 📋 Table of Contents
 
@@ -240,9 +240,9 @@ If you use this model in your research, please cite:
 ```bibtex
 @software{malaria_transmission_model_madagascar,
   title={Malaria Transmission Model in Madagascar: ITN Effectiveness and Resistance},
-  author={Your Name},
-  year={2024},
-  url={https://github.com/yourusername/malaria-transmission-model-madagascar},
+  author={Safo, et al. },
+  year={2025},
+  url={https://github.com/Nana-Safo-Duker/Malaria-Transmission-Model-Madagascar},
   note={Epidemiological modeling of malaria transmission with ITN effects}
 }
 ```

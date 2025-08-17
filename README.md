@@ -270,9 +270,9 @@ Citation Format (APA):
 
 Safo, M. F., Anane, A. A., Maina, G. N., & Duker, N. S. (2025). Malaria Transmission Model: Simulation and Resistance Analysis in Madagascar (Version 1.1.0). 
 
-GitHub Repository. https://github.com/Nana-Safo-Duker/Malaria-Transmission-Model-Madagascar
+GitHub - https://github.com/Nana-Safo-Duker/Malaria-Transmission-Model-Madagascar
 
-url={https://medium.com/@freshsafoduker300/simulating-and-fitting-malaria-transmission-model-in-madagascar-impact-of-insecticide-treated-nets-fd9c10d4cda4}
+url - https://medium.com/@freshsafoduker300/simulating-and-fitting-malaria-transmission-model-in-madagascar-impact-of-insecticide-treated-nets-fd9c10d4cda4
 
 ...
 

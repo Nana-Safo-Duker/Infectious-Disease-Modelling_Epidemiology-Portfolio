@@ -52,9 +52,9 @@ Six panels spanning outbreak forecasting, climate–malaria coupling, respirator
 
 ![Portfolio cross-project visual overview](assets/portfolio_overview.png)
 
-### Project theme map
+### Project theme map (epidemiology only)
 
-How the 11 folders group into Outbreak & Surveillance, Malaria & Vector-Borne, and Methods & Interpretation themes:
+Swimlane map of the **11 infectious-disease folders** (outbreak/surveillance, malaria/vector-borne, methods). This figure is unique to this repository — not shared with the biomedical or climate portfolios:
 
 ![Portfolio project theme map](assets/project_theme_map.png)
 

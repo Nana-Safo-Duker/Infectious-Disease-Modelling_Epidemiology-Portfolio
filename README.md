@@ -269,7 +269,7 @@ If you use this model in your research, please cite:
 
 ## Status: 🟢 Active Development
 
-###✨ Updates
+## Updates
 
 🧠 Improved Jupyter Notebook (.ipynb) with enhanced malaria transmission simulations and plots.
 

@@ -1,26 +1,33 @@
 # Malaria Transmission Model in Madagascar
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![R 4.0+](https://img.shields.io/badge/R-4.0+-blue.svg)](https://www.r-project.org/)
+
 A comprehensive epidemiological modeling study examining the effectiveness of Insecticide-Treated Nets (ITNs) in malaria control programs in Madagascar with particular focus on the impact of insecticide resistance over time.
 
 ## 📋 Table of Contents
 
 - [Overview](#overview)
-- [Model Description](#model-description)
 - [Features](#features)
 - [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Project Structure](#project-structure)
 - [Usage](#usage)
+  - [Python](#python)
+  - [R](#r)
+  - [Jupyter Notebook](#jupyter-notebook)
+- [Model Description](#model-description)
 - [Results](#results)
-- [File Structure](#file-structure)
+- [Documentation](#documentation)
 - [Contributing](#contributing)
-- [License](#license)
 - [Citation](#citation)
-- [Authors](#Authors)
-- [Contact](#contact)
-- [Acknowledgments](#Acknowledgments)
-- [References](#References)
-- [Changelog](#Changelog)
+- [Authors](#authors)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [References](#references)
 
-## Overview
+## 🎯 Overview
 
 This project implements a modified SIR (Susceptible-Infected-Recovered) epidemiological model to simulate malaria transmission dynamics in Madagascar. The model incorporates:
 
@@ -32,7 +39,198 @@ This project implements a modified SIR (Susceptible-Infected-Recovered) epidemio
 
 ### Research Question
 
-*How does insecticide resistance affect the long-term effectiveness of Insecticide-Treated Nets (ITNs) in malaria control programs in Madagascar?*
+> *How does insecticide resistance affect the long-term effectiveness of Insecticide-Treated Nets (ITNs) in malaria control programs in Madagascar?*
+
+## ✨ Features
+
+### Multiple Implementation Options
+- 🐍 **Python**: Complete object-oriented implementation with visualization tools
+- 📊 **R**: Statistical analysis with tidyverse and deSolve
+- 📓 **Jupyter Notebook**: Interactive analysis and documentation
+
+### Comprehensive Analysis
+- **Four Simulation Scenarios:**
+  - No ITNs (baseline)
+  - ITNs with no resistance
+  - ITNs with low resistance (5%/year)
+  - ITNs with high resistance (10%/year)
+
+- **Advanced Features:**
+  - Population dynamics simulation over 5 years
+  - ITN efficacy degradation modeling
+  - Statistical comparison of scenarios
+  - Model validation and sensitivity analysis
+  - Professional visualizations and reports
+
+## 🚀 Installation
+
+### Prerequisites
+
+**For Python:**
+- Python 3.8 or higher
+- pip package manager
+
+**For R:**
+- R 4.0 or higher
+- RStudio (recommended)
+
+### Quick Setup
+
+#### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Nana-Safo-Duker/Malaria-Transmission-Model-Madagascar.git
+cd Malaria-Transmission-Model-Madagascar
+```
+
+#### 2. Python Setup
+
+```bash
+# Create virtual environment (recommended)
+python -m venv venv
+
+# Activate virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+#### 3. R Setup
+
+```r
+# Install required packages
+install.packages(c(
+  "tidyverse",
+  "deSolve",
+  "ggplot2",
+  "dplyr",
+  "knitr"
+))
+```
+
+## 🎬 Quick Start
+
+### Python
+
+```bash
+# Run the complete analysis
+python main.py
+```
+
+This will:
+- Run all four simulation scenarios
+- Generate visualizations
+- Create summary statistics
+- Save results to `output/` directory
+
+### R
+
+```r
+# Run the R script
+source("scripts/Malaria-Transmission-Model-Madagascar.r")
+```
+
+### Jupyter Notebook
+
+```bash
+# Start Jupyter
+jupyter notebook
+
+# Open the notebook
+# notebooks/Malaria-Transmission-Model-Madagascar.ipynb
+```
+
+## 📁 Project Structure
+
+```
+Malaria-Transmission-Model-Madagascar/
+├── README.md                          # This file
+├── LICENSE                            # MIT License
+├── requirements.txt                   # Python dependencies
+├── .gitignore                        # Git ignore rules
+├── main.py                           # Main Python execution script
+│
+├── src/                              # Python source code
+│   ├── __init__.py                   # Package initialization
+│   ├── malaria_model.py              # Core model implementation
+│   ├── visualization.py              # Plotting and visualization
+│   └── utils.py                      # Utility functions
+│
+├── scripts/                          # R and other scripts
+│   └── Malaria-Transmission-Model-Madagascar.r
+│
+├── notebooks/                        # Jupyter notebooks
+│   └── Malaria-Transmission-Model-Madagascar.ipynb
+│
+├── data/                             # Data directory
+│   └── README.md                     # Data documentation
+│
+├── output/                           # Generated outputs
+│   └── README.md                     # Output documentation
+│
+├── docs/                             # Documentation
+│   └── model_description.md          # Detailed model docs
+│
+└── tests/                            # Unit tests
+    └── test_malaria_model.py         # Model tests
+```
+
+## 💻 Usage
+
+### Python API
+
+```python
+from src.malaria_model import MalariaModel, ModelParameters
+from src.visualization import MalariaVisualizer
+from src.utils import SimulationResults, calculate_summary_statistics
+
+# Initialize model with custom parameters
+params = ModelParameters(
+    R0=2.0,
+    infectious_period=14.0,
+    itn_coverage=0.8,
+    itn_efficacy=0.9,
+    resistance_rate=0.1,
+    human_population=200000,
+    simulation_days=365 * 5
+)
+
+# Create and run model
+model = MalariaModel(params)
+scenarios = model.run_multiple_scenarios()
+
+# Calculate statistics
+summary = calculate_summary_statistics(scenarios)
+
+# Visualize results
+visualizer = MalariaVisualizer()
+time_points = np.arange(0, params.simulation_days + 1, 1)
+visualizer.save_all_plots(scenarios, time_points)
+```
+
+### Customizing Parameters
+
+#### Python
+```python
+# Example: Change ITN coverage
+params = ModelParameters(itn_coverage=0.9)  # 90% coverage
+
+# Example: Adjust resistance rate
+params = ModelParameters(resistance_rate=0.15)  # 15% per year
+```
+
+#### R
+```r
+# Example: Change ITN coverage
+itn_coverage <- 0.9  # 90% coverage
+
+# Example: Adjust resistance rate
+resistance_rate <- 0.15  # 15% per year
+```
 
 ## 🧮 Model Description
 
@@ -68,100 +266,7 @@ E(t) = E₀ exp(-r_res × t/365)
 | Initial ITN Efficacy | 90% | Initial effectiveness of ITNs |
 | Resistance Rate | 10%/year | Annual rate of resistance development |
 
-## ✨ Features
-
-- **Four Simulation Scenarios:**
-  - No ITNs (baseline)
-  - ITNs with no resistance
-  - ITNs with low resistance (5%/year)
-  - ITNs with high resistance (10%/year)
-
-- **Comprehensive Analysis:**
-  - Population dynamics over 5 years
-  - ITN efficacy degradation modeling
-  - Statistical comparison of scenarios
-  - Model validation and sensitivity analysis
-
-- **Professional Visualizations:**
-  - Time series plots for human and vector infections
-  - ITN efficacy decay curves
-  - Summary statistics tables
-
-## 🚀 Installation
-
-### Prerequisites
-
-- R (version 4.0 or higher)
-- RStudio (recommended)
-
-### Required R Packages
-
-```r
-install.packages(c(
-  "tidyverse",
-  "deSolve", 
-  "ggplot2",
-  "dplyr",
-  "knitr"
-))
-```
-
-### Quick Setup
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/malaria-transmission-model-madagascar.git
-cd malaria-transmission-model-madagascar
-```
-
-2. Open the project in RStudio or your preferred R environment
-
-3. Install dependencies (if not already installed):
-```r
-source("install_dependencies.R")  # Optional helper script
-```
-
-## 📊 Usage
-
-### Running the Analysis
-
-#### Option 1: Jupyter Notebook (Recommended)
-```bash
-# Open the R-based Jupyter notebook
-jupyter notebook Malaria-Transmission-Model-Madagascar.ipynb
-```
-
-#### Option 2: R Script
-```r
-# Run the complete analysis
-source("Malaria-Transmission-Model-Madagascar.r")
-```
-
-#### Option 3: Interactive R Session
-```r
-# Load libraries
-library(tidyverse)
-library(deSolve)
-
-# Run simulations
-source("Malaria-Transmission-Model-Madagascar.r")
-
-# View results
-View(all_results)
-View(summary_stats)
-```
-
-### Customizing Parameters
-
-Modify the parameters in the notebook or script:
-
-```r
-# Example: Change ITN coverage
-itn_coverage <- 0.9  # 90% coverage instead of 80%
-
-# Example: Adjust resistance rate
-resistance_rate <- 0.15  # 15% per year instead of 10%
-```
+For detailed model documentation, see [docs/model_description.md](docs/model_description.md).
 
 ## 📈 Results
 
@@ -174,13 +279,6 @@ resistance_rate <- 0.15  # 15% per year instead of 10%
 
 ### Sample Output
 
-The analysis generates:
-- **Visualizations**: Time series plots showing infection dynamics
-- **Summary Statistics**: Peak infections, mean infections, and reduction percentages
-- **CSV Files**: `malaria_simulation_results.csv` and `malaria_summary_statistics.csv`
-
-### Example Results Table
-
 | Scenario | Peak Infected Humans | Reduction (%) | Mean Infected Humans |
 |----------|---------------------|---------------|---------------------|
 | No ITNs | 45,230 | - | 12,450 |
@@ -188,34 +286,48 @@ The analysis generates:
 | ITNs (Low Resistance) | 12,150 | 73.1% | 3,180 |
 | ITNs (High Resistance) | 18,670 | 58.7% | 4,920 |
 
-## 📁 File Structure
+### Generated Files
 
+Running the simulation creates:
+
+**Data Files:**
+- `malaria_simulation_results.csv` - Complete time series data
+- `malaria_summary_statistics.csv` - Summary statistics
+- `model_parameters.json` - Model configuration
+
+**Visualizations:**
+- `human_infections.png` - Human infection dynamics
+- `vector_infections.png` - Vector infection dynamics
+- `itn_efficacy.png` - ITN efficacy decay
+- `comprehensive_dashboard.png` - Combined dashboard
+
+**Reports:**
+- `analysis_report.txt` - Detailed findings and recommendations
+
+## 📚 Documentation
+
+- **[Model Description](docs/model_description.md)**: Detailed mathematical formulation and assumptions
+- **[Data Directory](data/README.md)**: Information about data files and formats
+- **[Output Directory](output/README.md)**: Description of generated outputs
+
+### API Documentation
+
+```python
+# Generate API documentation
+python -m pydoc src.malaria_model
+python -m pydoc src.visualization
+python -m pydoc src.utils
 ```
-malaria-transmission-model-madagascar/
-├── README.md                                    # This file
-├── Malaria-Transmission-Model-Madagascar.ipynb  # Main R-based Jupyter notebook
-├── Malaria-Transmission-Model-Madagascar.r      # R script version
-├── malaria_simulation_results.csv               # Complete simulation data
-├── malaria_summary_statistics.csv              # Summary statistics
-├── output.png                                   # Sample visualization
-├── output_1.png                                 # ITN efficacy plot
-└── install_dependencies.R                       # Optional dependency installer
+
+## 🧪 Testing
+
+```bash
+# Run tests (Python)
+pytest tests/
+
+# Run specific test
+pytest tests/test_malaria_model.py -v
 ```
-
-## 🔧 Technical Details
-
-### Model Validation
-
-The model includes comprehensive validation:
-- **Population Conservation**: Human population remains constant
-- **Data Quality Checks**: No negative or infinite values
-- **Reproduction Numbers**: R₀ calculations for different scenarios
-
-### Computational Requirements
-
-- **Memory**: ~50MB for full simulation
-- **Runtime**: <30 seconds on modern hardware
-- **Output Size**: ~1.5MB CSV files
 
 ## 🤝 Contributing
 
@@ -229,9 +341,10 @@ We welcome contributions! Please follow these steps:
 
 ### Development Guidelines
 
-- Follow R style guidelines
-- Add comments for complex calculations
-- Include unit tests for new functions
+- Follow PEP 8 for Python code
+- Follow R style guidelines for R code
+- Add docstrings for all functions
+- Include unit tests for new features
 - Update documentation as needed
 
 ## 📄 License
@@ -247,80 +360,80 @@ If you use this model in your research, please cite:
   title={Malaria Transmission Model in Madagascar: ITN Effectiveness and Resistance},
   author={Diop, Mouhamadou Fadel and Anane, Agnes Achiamaa and Maina, Grace Njoki and Duker, Nana Safo},
   year={2025},
-  url={https://medium.com/@freshsafoduker300/simulating-and-fitting-malaria-transmission-model-in-madagascar-impact-of-insecticide-treated-nets-fd9c10d4cda4},
+  url={https://github.com/Nana-Safo-Duker/Malaria-Transmission-Model-Madagascar},
   note={Epidemiological modeling of malaria transmission with ITN effects}
 }
-}
-
 ```
-## Authors
 
-Safo et al. (2025)
-Authors:
+**APA Format:**
 
-- **Nana Safo Duker**
+Safo, M. F., Anane, A. A., Maina, G. N., & Duker, N. S. (2025). *Malaria Transmission Model: Simulation and Resistance Analysis in Madagascar* (Version 1.1.0). GitHub. https://github.com/Nana-Safo-Duker/Malaria-Transmission-Model-Madagascar
 
+**Related Publication:**
+
+Medium Article: [Simulating and Fitting Malaria Transmission Model in Madagascar](https://medium.com/@freshsafoduker300/simulating-and-fitting-malaria-transmission-model-in-madagascar-impact-of-insecticide-treated-nets-fd9c10d4cda4)
+
+## 👥 Authors
+
+**Safo et al. (2025)**
+
+- **Nana Safo Duker** - *Lead Author*
 - **Mouhamadou Fadel Diop**
-
 - **Agnes Achiamaa Anane**
-
 - **Grace Njoki Maina**
-
-Citation Format (APA):
-
-Safo, M. F., Anane, A. A., Maina, G. N., & Duker, N. S. (2025). Malaria Transmission Model: Simulation and Resistance Analysis in Madagascar (Version 1.1.0). 
-
-GitHub - https://github.com/Nana-Safo-Duker/Malaria-Transmission-Model-Madagascar
-
-url - https://medium.com/@freshsafoduker300/simulating-and-fitting-malaria-transmission-model-in-madagascar-impact-of-insecticide-treated-nets-fd9c10d4cda4
-
-...
 
 ## 📞 Contact
 
-- **Author**: Nana Safo Duker 
-- **Email**: freshsafoduker3@gmail.com 
-- **GitHub**: https://github.com/Nana-Safo-Duker/Malaria-Transmission-Model-Madagascar
+- **Author**: Nana Safo Duker
+- **Email**: freshsafoduker3@gmail.com
+- **GitHub**: [@Nana-Safo-Duker](https://github.com/Nana-Safo-Duker)
+- **Project Link**: [https://github.com/Nana-Safo-Duker/Malaria-Transmission-Model-Madagascar](https://github.com/Nana-Safo-Duker/Malaria-Transmission-Model-Madagascar)
 
 ## 🙏 Acknowledgments
 
+This work was conducted as part of the **Disease Modelling for Pandemic Preparedness and Response Modular Certificate Course** under the **German-West African Centre for Global Health and Pandemic Prevention (G-WAC)** at **Kwame Nkrumah University of Science and Technology (KNUST)**, Kumasi, Ghana.
+
+We gratefully acknowledge:
+- G-WAC and its partners for support and collaborative environment
 - Madagascar Ministry of Health for epidemiological data
 - WHO Global Malaria Programme for ITN effectiveness guidelines
-- R community for excellent epidemiological modeling packages
-- Funding Support
-
-This work was conducted as part of the Disease Modelling for Pandemic Preparedness and Response Modular Certificate Course under the
-German-West African Centre for Global Health and Pandemic Prevention (G-WAC) at Kwame Nkrumah University of Science and Technology (KNUST), Kumasi, Ghana.
-
-We gratefully acknowledge the support, mentorship, and collaborative environment provided by G-WAC and its partners, which made this research and modeling project possible.
+- R and Python communities for excellent scientific computing packages
 
 ## 📖 References
 
 1. World Health Organization. (2023). *World Malaria Report 2023*. Geneva: WHO.
+
 2. Bhatt, S., et al. (2015). The effect of malaria control on Plasmodium falciparum in Africa between 2000 and 2015. *Nature*, 526(7572), 207-211.
+
 3. Ranson, H., et al. (2016). Insecticide resistance in African Anopheles mosquitoes: a worsening situation that needs urgent action. *Trends in Parasitology*, 32(3), 187-196.
 
----
+4. Griffin, J.T., et al. (2010). Reducing Plasmodium falciparum malaria transmission in Africa: a model-based evaluation of intervention strategies. *PLoS Medicine*, 7(8), e1000324.
 
+5. Smith, D.L., et al. (2007). Ross, Macdonald, and a theory for the dynamics and control of mosquito-transmitted pathogens. *PLoS Pathogens*, 3(4), e45.
 
-## Changelog
+## 📝 Changelog
+
 ### Version 1.1.0 — October 2025
 
-### Status: Active Development
+**Status**: Active Development
 
-### Updates
-
-🧠 Improved Jupyter Notebook (.ipynb) with enhanced malaria transmission simulations and plots.
-
-📊 Optimized R script (.R) for cleaner model fitting, reproducibility, and faster computation.
-
-🧾 Refined documentation and added clearer explanations for model assumptions.
-
-🧹 Repository cleanup — removed unused folders, temp files, and configuration clutter.
+**Updates:**
+- 🐍 Added comprehensive Python implementation with OOP design
+- 📊 Enhanced R script with improved documentation
+- 📓 Improved Jupyter Notebook with detailed explanations
+- 🎨 Advanced visualization tools with multiple plot types
+- 📁 Organized project structure with proper directories
+- 📚 Comprehensive documentation and API reference
+- ✅ Added unit tests and validation checks
+- 🔧 Utility functions for analysis and reporting
 
 ### Previous Version
 
-Version 1.0.0 — September 2025
+**Version 1.0.0 — September 2025**
+- 🔰 Initial release featuring deterministic malaria model
+- 📈 Basic ITN resistance simulations
+- 📊 R-based implementation
 
-🔰 Initial release featuring deterministic malaria model and ITN resistance simulations.
+---
 
+**Made with ❤️ for malaria research and public health**

@@ -267,7 +267,11 @@ If you use this model in your research, please cite:
 
 ---
 
-## Status: 🟢 Active Development
+
+## Changelog
+### Version 1.1.0 — October 2025
+
+### Status: 🟢 Active Development
 
 ### Updates
 

@@ -269,6 +269,7 @@ def calculate_summary_statistics(scenarios: Dict[str, pd.DataFrame]) -> pd.DataF
     # Calculate reductions compared to "No ITNs" baseline
     baseline = summary_df[summary_df['scenario'] == 'No ITNs']
     if not baseline.empty:
+        baseline_peak = baseline['max_infected_humans'].iloc[0]
         baseline_total = baseline['total_infected_humans'].iloc[0]
         baseline_mean = baseline['mean_infected_humans'].iloc[0]
         
@@ -278,8 +279,12 @@ def calculate_summary_statistics(scenarios: Dict[str, pd.DataFrame]) -> pd.DataF
         summary_df['diff_mean_infected_vs_no_itn'] = (
             summary_df['mean_infected_humans'] - baseline_mean
         )
+        # NOTE: peak_reduction_percent compares max_infected_humans (the true
+        # epidemic peak) against the baseline peak. It was previously computed
+        # from total_infected_humans, which mislabeled a cumulative-burden
+        # reduction as a "peak" reduction.
         summary_df['peak_reduction_percent'] = (
-            (baseline_total - summary_df['total_infected_humans']) / baseline_total * 100
+            (baseline_peak - summary_df['max_infected_humans']) / baseline_peak * 100
         ).round(1)
         summary_df['mean_reduction_percent'] = (
             (baseline_mean - summary_df['mean_infected_humans']) / baseline_mean * 100

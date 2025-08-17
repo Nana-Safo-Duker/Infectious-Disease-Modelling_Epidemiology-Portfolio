@@ -7,6 +7,7 @@ This script runs the complete malaria transmission simulation with ITN effects
 and generates comprehensive visualizations and reports.
 """
 
+import sys
 import numpy as np
 import pandas as pd
 from pathlib import Path
@@ -18,6 +19,11 @@ from src.utils import SimulationResults, validate_model_results, generate_report
 
 def main():
     """Main execution function"""
+    # Ensure Unicode symbols (checkmarks, bullets) print safely on all
+    # platforms, including Windows terminals that default to cp1252.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
     
     print("="*80)
     print("MALARIA TRANSMISSION MODEL - MADAGASCAR")

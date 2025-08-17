@@ -113,7 +113,7 @@ Your simulation compares 4 scenarios:
 3. **ITNs (Low Resistance)** - 5% resistance per year
 4. **ITNs (High Resistance)** - 10% resistance per year
 
-**Key Finding**: Even with high resistance, ITNs still reduce malaria by ~60%!
+**Key Finding**: Even with high resistance, ITNs still reduce peak malaria infections by ~77%!
 
 ---
 

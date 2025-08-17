@@ -6,6 +6,7 @@ This script demonstrates basic usage of the malaria transmission model.
 Perfect for getting started quickly!
 """
 
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
 from src.malaria_model import MalariaModel, ModelParameters, calculate_summary_statistics
@@ -13,6 +14,11 @@ from src.visualization import MalariaVisualizer
 
 def main():
     """Run a simple example simulation"""
+    # Ensure Unicode symbols (checkmarks, etc.) print safely on all platforms,
+    # including Windows terminals that default to cp1252.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
     
     print("=" * 70)
     print("MALARIA TRANSMISSION MODEL - QUICK START EXAMPLE")

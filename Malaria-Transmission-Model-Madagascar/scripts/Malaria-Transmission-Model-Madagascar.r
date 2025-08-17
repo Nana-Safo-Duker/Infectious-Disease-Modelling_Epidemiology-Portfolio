@@ -34,7 +34,11 @@ sir_si_itn <- function(t, y, parms) {
 # -------------------------
 # 2. Define the parameters
 # -------------------------
-dt <- (1:365)* 5 
+# Daily resolution over 5 years (0-1825 days -> 1826 time points), matching
+# the Python implementation's `np.arange(0, simulation_days + 1, 1)`.
+# NOTE: an earlier version used `dt <- (1:365) * 5`, which only produced 365
+# time points spaced 5 days apart (5, 10, ..., 1825) instead of a daily series.
+dt <- 0:(365 * 5)
 R0 <- 2
 infectious_period <- 14
 gammah <- 1/infectious_period

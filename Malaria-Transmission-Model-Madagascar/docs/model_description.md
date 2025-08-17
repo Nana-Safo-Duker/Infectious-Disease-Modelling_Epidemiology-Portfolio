@@ -151,10 +151,10 @@ Where:
 
 ### Numerical Methods
 
-- **ODE Solver**: LSODA (Livermore Solver for Ordinary Differential Equations)
+- **ODE Solver**: LSODA (Livermore Solver for Ordinary Differential Equations), via `scipy.integrate.odeint`
   - Automatically switches between stiff and non-stiff methods
-  - Adaptive step size control
-  - Maximum step size: 0.1 days
+  - Adaptive internal step size control (solver-determined; no fixed `hmax` is set)
+  - Solution is evaluated and returned at the requested daily output points
 
 ### Time Discretization
 

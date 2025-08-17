@@ -6,9 +6,9 @@ A comprehensive epidemiological modeling package for malaria transmission dynami
 __version__ = "1.1.0"
 __author__ = "Safo et al. (2025)"
 
-from .malaria_model import MalariaModel
+from .malaria_model import MalariaModel, ModelParameters
 from .visualization import MalariaVisualizer
-from .utils import ModelParameters, SimulationResults
+from .utils import SimulationResults
 
 __all__ = [
     "MalariaModel",

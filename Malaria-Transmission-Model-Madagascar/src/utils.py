@@ -34,7 +34,7 @@ class SimulationResults:
         self.summary_statistics.to_csv(f'{output_dir}/malaria_summary_statistics.csv', index=False)
         
         # Save parameters as JSON
-        with open(f'{output_dir}/model_parameters.json', 'w') as f:
+        with open(f'{output_dir}/model_parameters.json', 'w', encoding='utf-8') as f:
             json.dump(self.parameters, f, indent=2)
         
         print(f"Results saved to '{output_dir}/' directory:")
@@ -175,7 +175,7 @@ def generate_report(results: SimulationResults,
     import os
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
     
-    with open(output_file, 'w') as f:
+    with open(output_file, 'w', encoding='utf-8') as f:
         f.write("="*80 + "\n")
         f.write("MALARIA TRANSMISSION MODEL - COMPREHENSIVE ANALYSIS REPORT\n")
         f.write("="*80 + "\n\n")

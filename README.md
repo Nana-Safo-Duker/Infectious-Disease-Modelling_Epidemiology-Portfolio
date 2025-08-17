@@ -14,6 +14,11 @@ A comprehensive epidemiological modeling study examining the effectiveness of In
 - [Contributing](#contributing)
 - [License](#license)
 - [Citation](#citation)
+- [Authors](#Authors)
+- [Contact](#contact)
+- [Acknowledgments](#Acknowledgments)
+- [References](#References)
+- [Changelog](#Changelog)
 
 ## 🔬 Overview
 

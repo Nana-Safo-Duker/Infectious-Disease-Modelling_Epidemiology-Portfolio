@@ -249,9 +249,9 @@ If you use this model in your research, please cite:
 
 ## 📞 Contact
 
-- **Author**: Your Name
-- **Email**: your.email@example.com
-- **GitHub**: [@yourusername](https://github.com/yourusername)
+- **Author**: Nana Safo Duker 
+- **Email**: freshsafoduker3@gmail.com 
+- **GitHub**: https://github.com/Nana-Safo-Duker/Malaria_Transmission_Model_Madagascar
 
 ## 🙏 Acknowledgments
 

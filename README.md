@@ -271,7 +271,7 @@ If you use this model in your research, please cite:
 ## Changelog
 ### Version 1.1.0 — October 2025
 
-### Status: 🟢 Active Development
+### Status: Active Development
 
 ### Updates
 

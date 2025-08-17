@@ -281,6 +281,12 @@ url={https://medium.com/@freshsafoduker300/simulating-and-fitting-malaria-transm
 - Madagascar Ministry of Health for epidemiological data
 - WHO Global Malaria Programme for ITN effectiveness guidelines
 - R community for excellent epidemiological modeling packages
+- Funding Support
+
+This work was conducted as part of the Disease Modelling for Pandemic Preparedness and Response Modular Certificate Course under the
+German-West African Centre for Global Health and Pandemic Prevention (G-WAC) at Kwame Nkrumah University of Science and Technology (KNUST), Kumasi, Ghana.
+
+We gratefully acknowledge the support, mentorship, and collaborative environment provided by G-WAC and its partners, which made this research and modeling project possible.
 
 ## 📖 References
 

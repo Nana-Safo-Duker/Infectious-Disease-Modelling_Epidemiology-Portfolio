@@ -245,6 +245,21 @@ If you use this model in your research, please cite:
   url={https://medium.com/@freshsafoduker300/simulating-and-fitting-malaria-transmission-model-in-madagascar-impact-of-insecticide-treated-nets-fd9c10d4cda4},
   note={Epidemiological modeling of malaria transmission with ITN effects}
 }
+🧑‍🔬 Authors
+
+Safo et al. (2025)
+Authors:
+
+Mouhamadou Fadel Diop
+
+Agnes Achiamaa Anane
+
+Grace Njoki Maina
+
+Nana Safo Duker
+
+Citation Format (APA):
+Safo, M. F., Anane, A. A., Maina, G. N., & Duker, N. S. (2025). Malaria Transmission Model: Simulation and Resistance Analysis in Madagascar (Version 1.1.0). GitHub Repository. https://github.com/Nana-Safo-Duker/Malaria-Transmission-Model-Madagascar
 ```
 
 ## 📞 Contact

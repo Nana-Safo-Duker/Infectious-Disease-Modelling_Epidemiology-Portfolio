@@ -251,7 +251,7 @@ If you use this model in your research, please cite:
 
 - **Author**: Nana Safo Duker 
 - **Email**: freshsafoduker3@gmail.com 
-- **GitHub**: https://github.com/Nana-Safo-Duker/Malaria_Transmission_Model_Madagascar
+- **GitHub**: https://github.com/Nana-Safo-Duker/Malaria-Transmission-Model-Madagascar
 
 ## 🙏 Acknowledgments
 

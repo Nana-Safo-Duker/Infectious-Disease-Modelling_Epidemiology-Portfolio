@@ -20,7 +20,7 @@ A comprehensive epidemiological modeling study examining the effectiveness of In
 - [References](#References)
 - [Changelog](#Changelog)
 
-## 🔬 Overview
+## Overview
 
 This project implements a modified SIR (Susceptible-Infected-Recovered) epidemiological model to simulate malaria transmission dynamics in Madagascar. The model incorporates:
 
@@ -251,6 +251,7 @@ If you use this model in your research, please cite:
   note={Epidemiological modeling of malaria transmission with ITN effects}
 }
 }
+
 ```
 ## Authors
 

@@ -279,7 +279,7 @@ If you use this model in your research, please cite:
 
 🧹 Repository cleanup — removed unused folders, temp files, and configuration clutter.
 
-📅 Previous Version
+### Previous Version
 
 Version 1.0.0 — September 2025
 

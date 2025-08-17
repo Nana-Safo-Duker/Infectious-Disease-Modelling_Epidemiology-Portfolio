@@ -242,7 +242,7 @@ If you use this model in your research, please cite:
   title={Malaria Transmission Model in Madagascar: ITN Effectiveness and Resistance},
   author={Safo, et al. },
   year={2025},
-  url={https://github.com/Nana-Safo-Duker/Malaria-Transmission-Model-Madagascar},
+  url={https://medium.com/@freshsafoduker300/simulating-and-fitting-malaria-transmission-model-in-madagascar-impact-of-insecticide-treated-nets-fd9c10d4cda4},
   note={Epidemiological modeling of malaria transmission with ITN effects}
 }
 ```

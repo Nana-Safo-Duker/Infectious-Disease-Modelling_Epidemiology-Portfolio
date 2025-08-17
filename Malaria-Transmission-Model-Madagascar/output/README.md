@@ -49,3 +49,4 @@ summary <- read.csv('output/malaria_summary_statistics.csv')
 - Backup important results before re-running
 - Large CSV files can be opened efficiently with pandas or data.table
 
+**Last Updated**: August 2025

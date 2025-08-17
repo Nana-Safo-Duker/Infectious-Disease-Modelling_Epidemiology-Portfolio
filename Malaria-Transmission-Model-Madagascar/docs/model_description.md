@@ -283,6 +283,6 @@ Potential model improvements:
 ---
 
 **Version**: 1.1.0  
-**Last Updated**: October 2025  
+**Last Updated**: August 2025
 **Authors**: Safo et al. (2025)
 

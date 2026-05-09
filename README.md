@@ -21,13 +21,17 @@ This README provides the cross-project narrative for the repository: what is inc
 
 ## About
 
-**Description:** AI/ML epidemiology portfolio covering outbreak prediction, malaria surveillance, respiratory analytics, digital epidemiology, explainable AI, and spatiotemporal transmission modeling.
+This repository is a comprehensive AI/ML epidemiology portfolio built to demonstrate practical, reproducible infectious-disease analytics across multiple public-health scenarios. The projects connect statistical epidemiology, machine learning, and interpretable modeling to support outbreak forecasting, transmission pattern analysis, and surveillance strategy development.
+
+**Description:** Multi-project infectious disease analytics portfolio spanning Bayesian outbreak prediction, malaria and vector-borne disease modeling, respiratory surveillance, digital epidemiology, explainable AI workflows, and spatiotemporal epidemic modeling.
 
 **Repository:** [Infectious-Disease-Modelling_Epidemiology-Portfolio](https://github.com/Nana-Safo-Duker/Infectious-Disease-Modelling_Epidemiology-Portfolio)
 
 **Website:** [https://nana-safo-duker.github.io/](https://nana-safo-duker.github.io/)
 
-**Topics:** infectious disease modeling, epidemiology, public health AI, outbreak forecasting, malaria analytics, respiratory surveillance, Bayesian inference, explainable AI, spatiotemporal modeling, bioinformatics.
+**Mission:** Build transparent, reusable computational workflows that can be adapted for infectious disease research, education, and decision-support prototyping.
+
+**Topics:** infectious disease modeling, epidemiology, public health AI, outbreak forecasting, malaria analytics, respiratory surveillance, Bayesian inference, explainable AI, spatiotemporal modeling, transmission modeling, bioinformatics.
 
 ## Portfolio Overview
 

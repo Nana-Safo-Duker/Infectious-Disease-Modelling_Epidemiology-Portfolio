@@ -8,6 +8,7 @@ This README provides the cross-project narrative for the repository: what is inc
 
 - [About](#about)
 - [Portfolio Overview](#portfolio-overview)
+- [Visualizations](#visualizations)
 - [Repository Layout](#repository-layout)
 - [Technology Stack](#technology-stack)
 - [Shared Setup Workflow](#shared-setup-workflow)
@@ -41,10 +42,31 @@ This repository is a comprehensive AI/ML epidemiology portfolio built to demonst
 - **Deliverables per project:** repository files (`.gitattributes`, `.gitignore`, `LICENSE`, `requirements.txt`), runnable notebook, Python pipeline, R pipeline, a committed visualization (`assets/overview.png` or equivalent), and project README.
 - **Operational structure:** independent project folders that can be run in isolation while preserving a consistent portfolio pattern.
 
+## Visualizations
+
+Cross-project figures committed under `assets/` summarize the portfolio at a glance. Each individual project folder also ships its own `assets/overview.png` (or Madagascar `output/` plots) for topic-specific detail.
+
+### Cross-project analytical overview
+
+Six panels spanning outbreak forecasting, climate–malaria coupling, respiratory anomaly surveillance, explainable feature importance, spatiotemporal spread, and Madagascar ITN scenario peaks:
+
+![Portfolio cross-project visual overview](assets/portfolio_overview.png)
+
+### Project theme map
+
+How the 11 folders group into Outbreak & Surveillance, Malaria & Vector-Borne, and Methods & Interpretation themes:
+
+![Portfolio project theme map](assets/project_theme_map.png)
+
+> These root figures are illustrative portfolio summaries. Open any project folder for the runnable pipeline and that project’s dedicated visualization.
+
 ## Repository Layout
 
 ```text
 Infectious-Disease-Modelling_Epidemiology-Portfolio/
+├── assets/                                      # Portfolio-level visualizations for this README
+│   ├── portfolio_overview.png
+│   └── project_theme_map.png
 ├── Bayesian ML outbreak prediction/
 ├── Deep learning for malaria parasite detection/
 ├── Deep learning vector diseases/
@@ -83,14 +105,14 @@ For the 10 newly scaffolded folders, each project follows a consistent pattern:
 
 Clone once, then run any project folder independently.
 
-```bash
+```sh
 git clone https://github.com/Nana-Safo-Duker/Infectious-Disease-Modelling_Epidemiology-Portfolio.git
 cd Infectious-Disease-Modelling_Epidemiology-Portfolio
 ```
 
 ### Python setup (per project)
 
-```bash
+```sh
 cd "<project-folder>"
 python -m venv .venv
 .venv\Scripts\activate
@@ -106,7 +128,7 @@ source("analysis_pipeline.R")
 
 ### Notebook execution
 
-```bash
+```sh
 jupyter notebook
 ```
 
@@ -197,9 +219,11 @@ Open `detailed_review_notebook.ipynb` inside the chosen project folder and run a
 ## Contributing
 
 1. Create a feature branch:
-   ```bash
+
+```sh
    git checkout -b feature/<feature-name>
-   ```
+```
+
 2. Limit scope to one project folder per change when possible.
 3. Update both the affected project `README.md` and this root `README.md` for structural updates.
 4. Validate by running relevant scripts/notebooks and checking generated outputs.
